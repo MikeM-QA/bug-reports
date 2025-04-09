@@ -1,0 +1,29 @@
+---
+- summary: |
+    Не открывается сайт магазина через браузер Safari
+  environment: |
+    Opera GX Версия 116.0.5366.148
+    Windows 10 Pro 22H2 Сборка 19045.5487
+  steps-to-reproduce: |
+    1. Открыть страницу browserstack.com , зарегистрироваться и получить доступ к бесплатному функционалу
+    2. Выбрать в таблице браузер Safari последней версии
+    3. Ввести в адресной строке адрес страницы https://hexlet-products-store.vercel.app   
+  expected-result: |
+    Сайт открывается в браузере Safari последней версии
+  actual-result: |
+    Выпадает ошибка "Failed to open page"
+
+- summary: |
+    Нет мобильной версии сайта
+  environment: |
+    Opera GX Версия 116.0.5366.148
+    Windows 10 Pro 22H2 Сборка 19045.5487
+  steps-to-reproduce: |
+    1. Открыть страницу: https://hexlet-products-store.vercel.app
+    2. Открыть DevTools (Ctrl+Shift+I)
+    3. Открыть Device Toolbar (Ctrl+Shift+M)
+    4. Выбрать в выпадающем списке Dimensions случайную модель смартфона, например iPhone
+  expected-result: |
+    Есть мобильная версия сайта
+  actual-result: |
+    Мобильная версия сайта не реализована
